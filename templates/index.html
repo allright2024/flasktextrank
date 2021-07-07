@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+</head>
+
+<body>
+    <form action="/" method="post">
+        <p><label for="keyword1">newsurl </label><input type="text" name="keyword1" id="keyword1"></p>
+        <button type="submit">검색</button>
+    </form>
+
+    {% if data %}
+    <div id="result">
+        <!-- {{data}} -->
+        <!-- whitespace를 위해 1줄 처리 -->
+        {% for k,v in data.items() %}
+        <div class="box box{{loop.index}}" value="{{v}}"> {{v[0]}} <br> {{v[1]}} <br> {{v[2]}} </div>{% endfor %} {% endif %}
+
+        <script src="{{url_for('static',filename='index.js')}}"></script>
+</body>
+
+</html>
