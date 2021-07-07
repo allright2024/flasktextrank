@@ -1,0 +1,2 @@
+이건 뉴스  url받아서 3줄 요약해주는 웹페이지 만들어주는 코드
+app.py, textrank.py, index.html, index.js, index.css 제외하고는 쓸모없는 파일(연습하다가 만들었는데 지우기 아까워서 안지움)
